@@ -1,5 +1,26 @@
 {% extends 'main.html' %}
 
-{% block content %}
-    test
+{% block extra_styles %}
+    <link href="/static/css/public.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+
+    <div id="public_container_main" class="container-fluid">
+        <div class="row center_vertical">
+            <div class="col-md-8 col-centered">
+                <div id="public_left_container" class="col-md-4 center_text">
+                    <h1>Mini<span class="text_color_white">Flash</span></h1>
+                    <p><span class="text_color_white">Minimalistic</span> agile<span class="text_color_white"> development</span> tool</p>
+                </div><!--- end col -->
+                <div class="col-md-4 visible_desktop"><div class="verftical_divider"></div></div>
+                <div class="col-md-4 center_text">
+                    test
+                </div><!--- end col -->
+            </div><!--- end col -->
+        </div><!--- end row -->
+    </div><!--- end container-fluid -->
+
+    {% block content %}{% endblock %}
+
 {% endblock %}
