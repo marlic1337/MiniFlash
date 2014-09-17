@@ -7,15 +7,25 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
 def home(request):
-    if request.user.is_authenticated():
-        return HttpResponseRedirect(reverse('overview'))
-    form = CustomLoginForm()
-    return render_to_response('public/public_login.html', locals(), context_instance=RequestContext(request))
+	if request.user.is_authenticated():
+		return HttpResponseRedirect(reverse('overview'))
+	if request.method == "POST":
+		login_form = CustomLoginForm(request.POST)
+		if login_form.is_valid():
+			login_form.login(request)
+			return HttpResponseRedirect(reverse('home'))
+	form = CustomLoginForm()
+	return render_to_response('public/public_login.html', locals(), context_instance=RequestContext(request))
 
 def register(request):
-    form = CustomSignupForm()
-    return render_to_response('public/public_register.html', locals(), context_instance=RequestContext(request))
+	if request.method == "POST":
+		register_form = CustomSignupForm(request.POST)
+		if register_form.is_valid():
+			register_form.save(request)
+			return HttpResponseRedirect(reverse('home'))
+	form = CustomSignupForm()
+	return render_to_response('public/public_register.html', locals(), context_instance=RequestContext(request))
 
 @login_required
 def overview(request):
-    return render_to_response('authenticated/base.html', locals(), context_instance=RequestContext(request))
+	return render_to_response('authenticated/base.html', locals(), context_instance=RequestContext(request))

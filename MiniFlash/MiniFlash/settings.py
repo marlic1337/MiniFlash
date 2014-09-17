@@ -114,5 +114,8 @@ AUTHENTICATION_BACKENDS = (
 AUTH_USER_MODEL = 'User.CustomUser'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_FORMS = {'login': 'User.forms.CustomLoginForm', 'signup': 'User.forms.CustomSignupForm'}
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
