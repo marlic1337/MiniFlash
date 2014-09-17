@@ -10,18 +10,18 @@ def home(request):
 	if request.user.is_authenticated():
 		return HttpResponseRedirect(reverse('overview'))
 	if request.method == "POST":
-		login_form = CustomLoginForm(request.POST)
-		if login_form.is_valid():
-			login_form.login(request)
+		form = CustomLoginForm(request.POST)
+		if form.is_valid():
+			form.login(request)
 			return HttpResponseRedirect(reverse('home'))
 	form = CustomLoginForm()
 	return render_to_response('public/public_login.html', locals(), context_instance=RequestContext(request))
 
 def register(request):
 	if request.method == "POST":
-		register_form = CustomSignupForm(request.POST)
-		if register_form.is_valid():
-			register_form.save(request)
+		form = CustomSignupForm(request.POST)
+		if form.is_valid():
+			form.save(request)
 			return HttpResponseRedirect(reverse('home'))
 	form = CustomSignupForm()
 	return render_to_response('public/public_register.html', locals(), context_instance=RequestContext(request))

@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     url(r'^overview', 'MiniFlash.views.overview', name='overview'),
 
     url(r'^admin/', include(admin.site.urls)),
-    #(r'^accounts/', include('allauth.urls')),
+    (r'^accounts/', include('allauth.urls')),
 )

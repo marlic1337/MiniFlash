@@ -5,5 +5,4 @@ class CustomLoginForm(LoginForm):
         super(CustomLoginForm, self).__init__(*args, **kwargs)
         self.fields['login'].label = ''
         self.fields['password'].label = ''
-        self.fields.pop('remember')
         self.fields['login'].widget.attrs['placeholder'] = 'Email'
