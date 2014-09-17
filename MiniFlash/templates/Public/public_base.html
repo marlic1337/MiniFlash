@@ -17,7 +17,12 @@
                 </div><!--- end col -->
                 <div class="col-md-4 visible_desktop"><div class="verftical_divider"></div></div>
                 <div class="col-md-4 center_text">
-                    {% block content %}{% endblock %}
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form }}
+                        <input type="submit" value="{% block submit_value %}{% endblock %}" />
+                        {% block link %}{% endblock %}
+                    </form>
                 </div><!--- end col -->
             </div><!--- end col -->
         </div><!--- end row -->
