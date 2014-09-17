@@ -14,7 +14,8 @@ def home(request):
 		if form.is_valid():
 			form.login(request)
 			return HttpResponseRedirect(reverse('home'))
-	form = CustomLoginForm()
+	else:
+		form = CustomLoginForm()
 	return render_to_response('public/public_login.html', locals(), context_instance=RequestContext(request))
 
 def register(request):
@@ -23,7 +24,8 @@ def register(request):
 		if form.is_valid():
 			form.save(request)
 			return HttpResponseRedirect(reverse('home'))
-	form = CustomSignupForm()
+	else:
+		form = CustomSignupForm()
 	return render_to_response('public/public_register.html', locals(), context_instance=RequestContext(request))
 
 @login_required

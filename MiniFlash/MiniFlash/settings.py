@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 	'allauth.account',
 	'south',
 	'User',
+    'bootstrap3',
 )
 
 SITE_ID = 1
