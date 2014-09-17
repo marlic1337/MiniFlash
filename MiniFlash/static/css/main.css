@@ -26,3 +26,18 @@
     float: none;
     margin: 0 auto;
 }
+
+.visible_mobile {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+/* mobile */
+@media (max-width:995px) {
+    .visible_mobile {
+        display: block;
+    }
+    .visible_desktop {
+        display: none;
+    }
+}
