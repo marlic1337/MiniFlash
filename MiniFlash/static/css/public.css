@@ -1,0 +1,30 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: #19BF96;
+}
+
+#public_container_main{
+    min-height: 100%;
+    height: 100%;
+}
+
+.center_text{
+    text-align: center;
+}
+
+#public_left_container h1{
+    font-size: 70px;
+}
+
+#public_left_container p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+/* mobile */
+/*@media (max-width:990px) {*/
+/*}*/

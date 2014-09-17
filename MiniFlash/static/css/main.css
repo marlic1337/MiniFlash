@@ -1,0 +1,28 @@
+*{
+    color: #333333;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+.text_color_white{
+    color: #ffffff;
+}
+
+.center_vertical {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.verftical_divider{
+    border-left:1px solid #333333;
+    border-right:1px solid #333333;
+    height:250px;
+    position:absolute;
+    right:50%;
+    top: -40px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
