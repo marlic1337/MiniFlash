@@ -2,11 +2,20 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from User.forms import CustomSignupForm
 from User.login_form import CustomLoginForm
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 def home(request):
+    if request.user.is_authenticated():
+        return HttpResponseRedirect(reverse('overview'))
     form = CustomLoginForm()
     return render_to_response('public/public_login.html', locals(), context_instance=RequestContext(request))
 
 def register(request):
     form = CustomSignupForm()
     return render_to_response('public/public_register.html', locals(), context_instance=RequestContext(request))
+
+@login_required
+def overview(request):
+    return render_to_response('authenticated/base.html', locals(), context_instance=RequestContext(request))
