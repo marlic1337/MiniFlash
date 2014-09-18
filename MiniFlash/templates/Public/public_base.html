@@ -3,6 +3,7 @@
 
 {% block extra_styles %}
     <link href="/static/css/public.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-switch.css" rel="stylesheet">
 {% endblock %}
 
 {% block main_content %}
@@ -17,7 +18,7 @@
                     <p><span class="text_color_white">Minimalistic</span> agile<span class="text_color_white"> development</span> tool</p>
                 </div><!--- end col -->
                 <div class="col-md-4 visible_desktop"><div class="verftical_divider"></div></div>
-                <div class="col-md-4 center_text">
+                <div id="public_right_container" class="col-md-4 center_text">
                     <form action="" method="post">
                         {% csrf_token %}
                         {% bootstrap_form form %}
@@ -29,4 +30,16 @@
         </div><!--- end row -->
     </div><!--- end container-fluid -->
 
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="/static/js/bootstrap-switch.min.js"></script>
+    <script>
+        jQuery.noConflict();
+        (function($) {
+            $(function() {
+                $("#id_remember").bootstrapSwitch();
+            });
+        })(jQuery);
+    </script>
 {% endblock %}

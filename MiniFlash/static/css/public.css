@@ -23,3 +23,11 @@ body{
     font-size: 15px;
     font-weight: bold;
 }
+
+#public_right_container{
+    padding-top: 30px;
+}
+
+label{
+    color: #ffffff;
+}
