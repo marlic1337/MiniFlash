@@ -40,7 +40,7 @@ INSTALLED_APPS = (
 	'allauth.account',
 	'south',
 	'User',
-    'bootstrap3',
+	'bootstrap3',
 )
 
 SITE_ID = 1
@@ -121,3 +121,15 @@ SOCIALACCOUNT_AUTO_SIGNUP = False
 ACCOUNT_FORMS = {'login': 'User.forms.CustomLoginForm', 'signup': 'User.forms.CustomSignupForm'}
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Default settings
+BOOTSTRAP3 = {
+	# The URL to the jQuery JavaScript file
+	'jquery_url': os.path.join(BASE_DIR, 'static/js/jquery-2.1.1.min.js'),
+
+	# The complete URL to the Bootstrap CSS file (None means derive it from base_url)
+	'css_url': os.path.join(BASE_DIR, 'static/css/bootstrap.css'),
+
+	# The complete URL to the Bootstrap JavaScript file (None means derive it from base_url)
+	'javascript_url': os.path.join(BASE_DIR, 'static/js/bootstrap.js'),
+}
