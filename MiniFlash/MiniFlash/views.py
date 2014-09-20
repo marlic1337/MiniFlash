@@ -12,6 +12,7 @@ def home(request):
 	if request.method == "POST":
 		form = CustomLoginForm(request.POST)
 		if form.is_valid():
+			print "test"
 			form.login(request)
 			return HttpResponseRedirect(reverse('home'))
 	else:
