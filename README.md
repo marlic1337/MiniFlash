@@ -15,6 +15,6 @@ requests==2.4.1
 requests-oauthlib==0.4.1
 
 Superuser account:
-username: admin
-email: admin@admin.com
+username: admin,
+email: admin@admin.com,
 password: admin

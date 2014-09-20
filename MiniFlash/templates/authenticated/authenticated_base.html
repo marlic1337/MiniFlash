@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block extra_styles %}
+    <link href="/static/css/slidebars.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+
+    <div id="sb-site">
+        <!-- main site content -->
+        <div class="sb-toggle-left">toggle</div>
+    </div>
+
+    <div class="sb-slidebar sb-left sb-width-custom" data-sb-width="300px">
+        <!-- left slidebar content -->
+    </div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="/static/js/slidebars.min.js"></script>
+    <script>
+        jQuery.noConflict();
+        (function($) {
+            $(function() {
+                var slidebar = new $.slidebars({
+                    siteClose: false // true or false
+                });
+                // open menu if not mobile
+                if($(window).width() > 995) slidebar.slidebars.open('left');
+            });
+        })(jQuery);
+    </script>
+{% endblock %}

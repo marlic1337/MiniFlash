@@ -30,4 +30,4 @@ def register(request):
 
 @login_required
 def overview(request):
-	return render_to_response('authenticated/base.html', locals(), context_instance=RequestContext(request))
+	return render_to_response('authenticated/authenticated_base.html', locals(), context_instance=RequestContext(request))
