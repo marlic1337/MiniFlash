@@ -2428,7 +2428,7 @@ input[type="month"].input-lg {
 }
 .radio label,
 .checkbox label {
-  padding-left: 20px;
+  /*padding-left: 20px;*/
   margin-bottom: 0;
   font-weight: normal;
   cursor: pointer;

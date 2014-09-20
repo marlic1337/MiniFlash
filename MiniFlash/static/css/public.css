@@ -25,9 +25,22 @@ body{
 }
 
 #public_right_container{
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 label{
     color: #ffffff;
+}
+
+.public_link{
+    color: #ffffff;
+    text-decoration: none;
+}
+.public_link:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#public_submit{
+    margin-bottom: 20px;
 }
