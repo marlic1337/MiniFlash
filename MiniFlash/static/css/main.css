@@ -3,8 +3,7 @@
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 
-/* #Graphite Flat Button
-==================================================*/
+/* graphite flat button */
 .graphite-flat-button{
     position: relative;
     vertical-align: top;
@@ -28,19 +27,18 @@
     color: #ffffff;
 }
 
+.text_color_dark{
+    color: #333333;
+}
+
+.center_text{
+    text-align: center;
+}
+
 .center_vertical {
     position: relative;
     top: 45%;
     transform: translateY(-50%);
-}
-
-.verftical_divider{
-    border-left:1px solid #333333;
-    border-right:1px solid #333333;
-    height:280px;
-    position:absolute;
-    right:50%;
-    top: -40px;
 }
 
 .col-centered{

@@ -9,5 +9,7 @@ urlpatterns = patterns('',
     url(r'^overview', 'MiniFlash.views.overview', name='overview'),
 
     url(r'^admin/', include(admin.site.urls)),
+    #remove log out confirmation step
+    (r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
     (r'^accounts/', include('allauth.urls')),
 )

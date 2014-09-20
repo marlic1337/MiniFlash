@@ -1,18 +1,39 @@
 {% extends 'main.html' %}
 
 {% block extra_styles %}
+    <link href="/static/css/authenticated.css" rel="stylesheet">
     <link href="/static/css/slidebars.css" rel="stylesheet">
 {% endblock %}
 
 {% block main_content %}
 
     <div id="sb-site">
+        <!-- navbar -->
+        <nav class="navigation_bar" role="navigation">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-4"><div id="toggle_slider" class="sb-toggle-left"><span class="glyphicon glyphicon-align-justify"></span></div></div>
+                    <div class="col-xs-4"><div id="auth_logo" class="center_text"><a href="{% url 'home' %}"><p class="text_color_white">Mini<span class="text_color_dark">Flash</span></p></a></div></div>
+                    <div class="col-xs-4"></div>
+                </div>
+            </div>
+        </nav><!-- end navbar -->
+
         <!-- main site content -->
-        <div class="sb-toggle-left">toggle</div>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="auth_container" class="col-md-12">
+                    test
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="sb-slidebar sb-left sb-width-custom" data-sb-width="300px">
         <!-- left slidebar content -->
+        <div id="user_info">todo_user_info</div>
+        <div class="menu_item"><a href="#">test</a></div>
+        <div class="menu_item"><a href="{% url 'account_logout' %}">Log Out</a></div>
     </div>
 
 {% endblock %}

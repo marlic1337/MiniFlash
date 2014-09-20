@@ -1,0 +1,48 @@
+#sb-site{
+    background-color: #E6E6E6!important;
+}
+
+.navigation_bar{
+    min-height: 60px;
+    background-color: #19BF96;
+    border-bottom: 4px solid #ffffff;
+}
+
+#auth_logo{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#auth_logo a:hover{
+    text-decoration: none;
+}
+
+#toggle_slider{
+    font-size: 35px;
+    margin-top: 9px;
+}
+
+#auth_container{
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#user_info{
+    color: #ffffff;
+    text-align: center;
+    min-height: 66px;
+    border-bottom: 4px solid #ffffff;
+}
+
+.menu_item{
+    text-align: center;
+    min-height: 40px;
+    border-bottom: 1px solid #898989;
+    font-size: 15px;
+    margin-top: 18px;
+}
+.menu_item a{
+    color: #ffffff;
+    text-decoration: none;
+}
