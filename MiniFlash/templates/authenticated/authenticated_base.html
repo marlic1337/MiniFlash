@@ -49,11 +49,18 @@
         jQuery.noConflict();
         (function($) {
             $(function() {
-                var slidebar = new $.slidebars({
-                    siteClose: false // true or false
-                });
-                // open menu if not mobile
-                if($(window).width() > 995) slidebar.slidebars.open('left');
+                // desktop or mobile
+                if($(window).width() > 995){
+                    var slidebar = new $.slidebars({
+                        siteClose: false // true or false
+                    });
+                    slidebar.slidebars.open('left');
+                }
+                else{
+                    var slidebar = new $.slidebars({
+                        siteClose: true // true or false
+                    });
+                }
             });
         })(jQuery);
     </script>
