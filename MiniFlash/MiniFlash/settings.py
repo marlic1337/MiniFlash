@@ -133,3 +133,5 @@ BOOTSTRAP3 = {
 	# The complete URL to the Bootstrap JavaScript file (None means derive it from base_url)
 	'javascript_url': os.path.join(BASE_DIR, 'static/js/bootstrap.js'),
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'storage/media/')

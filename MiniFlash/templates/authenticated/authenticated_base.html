@@ -31,7 +31,10 @@
 
     <div class="sb-slidebar sb-left sb-width-custom" data-sb-width="300px">
         <!-- left slidebar content -->
-        <div id="user_info">todo_user_info</div>
+        <div id="user_info">
+            <img id="user_image" width="45px" src="{{ request.user.logo_url }}" class="img-circle" alt="User Image" />
+            <div id="hello_text"><p class="text_color_white">Hello, {{ request.user.username }} :)</p></div>
+        </div>
         <div class="menu_item"><a href="#">test</a></div>
         <div class="menu_item"><a href="{% url 'account_logout' %}">Log Out</a></div>
     </div>

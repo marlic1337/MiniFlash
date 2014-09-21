@@ -29,10 +29,10 @@
 }
 
 #user_info{
-    color: #ffffff;
     text-align: center;
     min-height: 66px;
     border-bottom: 4px solid #ffffff;
+    padding: 0 70px 0 70px;
 }
 
 .menu_item{
@@ -45,4 +45,14 @@
 .menu_item a{
     color: #ffffff;
     text-decoration: none;
+}
+
+#user_image{
+    margin-top: 9px;
+    float: left;
+}
+
+#hello_text{
+    float: right;
+    margin-top: 22px;
 }
