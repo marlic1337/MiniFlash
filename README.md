@@ -2,7 +2,6 @@ MiniFlash
 =========
 
 Minimalistic agile development tool
-=========
 
 Dependencies:
     Django==1.6.7
