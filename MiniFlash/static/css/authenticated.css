@@ -32,15 +32,20 @@
     text-align: center;
     min-height: 66px;
     border-bottom: 4px solid #ffffff;
-    padding: 0 70px 0 70px;
+    padding: 0 40px 0 40px;
 }
 
 .menu_item{
     text-align: center;
-    min-height: 40px;
+    min-height: 55px;
     border-bottom: 1px solid #898989;
     font-size: 15px;
-    margin-top: 18px;
+    padding-top: 15px;
+}
+.menu_item_active{
+    background-color: #19BF96;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;;
 }
 .menu_item a{
     color: #ffffff;

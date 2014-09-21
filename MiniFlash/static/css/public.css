@@ -49,3 +49,10 @@ label{
 #public_submit{
     margin-bottom: 20px;
 }
+/* MEDIA QUERIES */
+/* phone */
+@media (max-width:360px) {
+    #public_row{
+        margin-top: 40px;
+    }
+}
