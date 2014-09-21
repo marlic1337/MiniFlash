@@ -6,13 +6,17 @@ body{
     background-color: #19BF96;
 }
 
+input[type=email], input[type=password]{
+    border-color: #333333!important;
+}
+
 .verftical_divider{
     border-left:1px solid #333333;
     border-right:1px solid #333333;
-    height:280px;
+    height:340px;
     position:absolute;
     right:50%;
-    top: -40px;
+    top: -90px;
 }
 
 #public_container_main{
@@ -30,7 +34,7 @@ body{
 }
 
 #public_right_container{
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 label{
@@ -49,7 +53,28 @@ label{
 #public_submit{
     margin-bottom: 20px;
 }
+
+.alert{
+    margin-top: -70px;
+}
+
+.alert-danger{
+    background-color: #ffffff;
+    border-color: #333333;
+    color: #333333;
+}
+
+.help-block{
+    color: #333333!important;
+}
+
 /* MEDIA QUERIES */
+/* mobile */
+@media (max-width:995px) {
+    .alert{
+        margin-top: 0;
+    }
+}
 /* phone */
 @media (max-width:360px) {
     #public_row{

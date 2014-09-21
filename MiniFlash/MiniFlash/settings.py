@@ -116,7 +116,7 @@ AUTH_USER_MODEL = 'User.CustomUser'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 SOCIALACCOUNT_AUTO_SIGNUP = False
 ACCOUNT_FORMS = {'login': 'User.forms.CustomLoginForm', 'signup': 'User.forms.CustomSignupForm'}
 
