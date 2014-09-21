@@ -21,9 +21,12 @@
 
         <!-- main site content -->
         <div class="container-fluid">
-            <div class="row">
-                <div id="auth_container" class="col-md-12">
+            <div id="container_row" class="row">
+                <div id="auth_container" class="col-md-10">
                     {% block auth_main_content %}{% endblock %}
+                </div>
+                <div id="auth_additional_right" class="col-md-2 visible_desktop">
+                    {% block auth_additional_right %}{% endblock %}
                 </div>
             </div>
         </div>
@@ -33,7 +36,7 @@
         <!-- left slidebar content -->
         <div id="user_info">
             <img id="user_image" width="45px" src="{{ request.user.logo_url }}" class="img-circle" alt="User Image" />
-            <div id="hello_text"><p class="text_color_white">Hello, {{ request.user.username }} :)</p></div>
+            <div id="hello_text"><p class="text_color_white">Hello, {{ request.user.username }}</p></div>
         </div>
         <div class="menu_item"><a href="{% url 'home' %}">Overview</a></div>
         <div class="menu_item"><a href="#">Test0</a></div>

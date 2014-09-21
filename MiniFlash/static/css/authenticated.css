@@ -8,6 +8,13 @@
     border-bottom: 4px solid #ffffff;
 }
 
+.footer{
+    min-height: 66px;
+    background-color: #19BF96;
+    border-top: 4px solid #ffffff;
+    margin-bottom: 0;
+}
+
 #auth_logo{
     font-size: 30px;
     font-weight: bold;
@@ -20,12 +27,6 @@
 #toggle_slider{
     font-size: 35px;
     margin-top: 9px;
-}
-
-#auth_container{
-    margin-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 #user_info{
@@ -60,4 +61,23 @@
 #hello_text{
     float: right;
     margin-top: 22px;
+}
+
+#container_row{
+    padding: 15px 15px 15px 15px;
+}
+
+#auth_container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    min-height: 865px;
+}
+
+#auth_additional_right{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #19BF96;
+    min-height: 865px;
+    border-left: 4px solid #ffffff;
 }
