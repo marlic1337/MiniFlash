@@ -105,6 +105,12 @@
     color: #ffffff;
 }
 
+.alert-success{
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #333333;
+}
+
 /* MEDIA QUERIES */
 /* mobile */
 @media (max-width:995px) {

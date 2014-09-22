@@ -96,6 +96,7 @@ TEMPLATE_DIRS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.messages.context_processors.messages',
 	# Required by allauth template tags
 	"django.core.context_processors.request",
 	# allauth specific context processors

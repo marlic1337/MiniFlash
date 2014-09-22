@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load bootstrap3 %}
 
 {% block extra_styles %}
     <link href="/static/css/authenticated.css" rel="stylesheet">
@@ -23,6 +24,7 @@
         <div class="container-fluid">
             <div id="container_row" class="row">
                 <div id="auth_container" class="col-md-10">
+                    {% bootstrap_messages %}
                     <div class="container_header">{% block container_header %}{% endblock %}</div>
                     {% block auth_main_content %}{% endblock %}
                 </div>
