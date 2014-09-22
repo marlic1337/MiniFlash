@@ -4,13 +4,13 @@
 
 .navigation_bar{
     min-height: 60px;
-    background-color: #19BF96;
+    background-color: #16AC87;
     border-bottom: 4px solid #ffffff;
 }
 
 .footer{
     min-height: 66px;
-    background-color: #19BF96;
+    background-color: #16AC87;
     border-top: 4px solid #ffffff;
     margin-bottom: 0;
 }
@@ -44,12 +44,12 @@
     padding-top: 15px;
 }
 .menu_item_active{
-    background-color: #19BF96;
+    background-color: #16AC87;
     border-top: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;;
 }
 .menu_item_active_first{
-    background-color: #19BF96;
+    background-color: #16AC87;
     border-bottom: 2px solid #ffffff;;
 }
 .menu_item a{
@@ -82,7 +82,7 @@
 #auth_additional_right{
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #19BF96;
+    background-color: #16AC87;
     min-height: 865px;
     border-left: 4px solid #ffffff;
     color: #ffffff;
