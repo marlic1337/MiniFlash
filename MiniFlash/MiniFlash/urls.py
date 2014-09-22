@@ -6,7 +6,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'MiniFlash.views.home', name='home'),
     url(r'^register$', 'MiniFlash.views.register', name='register'),
-    url(r'^overview', 'MiniFlash.views.overview', name='overview'),
+    url(r'^overview$', 'MiniFlash.views.overview', name='overview'),
+
+    url(r'^', include('Project.urls')),
+    url(r'^', include('User.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
     #remove log out confirmation step

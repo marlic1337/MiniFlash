@@ -23,9 +23,10 @@
         <div class="container-fluid">
             <div id="container_row" class="row">
                 <div id="auth_container" class="col-md-10">
+                    <div class="container_header">{% block container_header %}{% endblock %}</div>
                     {% block auth_main_content %}{% endblock %}
                 </div>
-                <div id="auth_additional_right" class="col-md-2 visible_desktop">
+                <div id="auth_additional_right" class="col-md-2">
                     {% block auth_additional_right %}{% endblock %}
                 </div>
             </div>
@@ -38,10 +39,10 @@
             <img id="user_image" width="45px" src="{{ request.user.logo_url }}" class="img-circle" alt="User Image" />
             <div id="hello_text"><p class="text_color_white">Hello, {{ request.user.username }}</p></div>
         </div>
-        <div class="menu_item"><a href="{% url 'home' %}">Overview</a></div>
-        <div class="menu_item"><a href="#">Test0</a></div>
-        <div class="menu_item menu_item_active"><a href="#">Test1</a></div>
-        <div class="menu_item"><a href="{% url 'account_logout' %}">Log Out</a></div>
+        <div class="menu_item {% block overview_active %}{% endblock %}"><a href="{% url 'overview' %}"><span class="glyphicon glyphicon-globe text_color_white"></span> Overview</a></div>
+        <div class="menu_item {% block projects_active %}{% endblock %}"><a href="{% url 'my_projects' %}"><span class="glyphicon glyphicon-folder-open text_color_white"></span> Projects</a></div>
+        <div class="menu_item {% block user_settings_active %}{% endblock %}"><a href="{% url 'user_settings' %}"><span class="glyphicon glyphicon-user text_color_white"></span> User Settings</a></div>
+        <div class="menu_item"><a href="{% url 'account_logout' %}"><span class="glyphicon glyphicon-log-out text_color_white"></span> Log Out</a></div>
     </div>
 
 {% endblock %}
