@@ -26,6 +26,15 @@ input{
     outline: none;
 }
 
+.button-a{
+    display: block;
+    text-decoration: none!important;
+    padding-top: 7px;
+}
+.button-a:hover{
+    color:white;
+}
+
 .text_color_white{
     color: #ffffff;
 }
@@ -54,13 +63,21 @@ input{
 }
 
 .margin_top{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .alert-danger{
     background-color: #ffffff;
     border-color: #333333;
     color: #333333;
+}
+
+.no_padding_left{
+    padding-left: 0;
+}
+
+.no_padding_right{
+    padding-right: 0;
 }
 
 /* MEDIA QUERIES */
