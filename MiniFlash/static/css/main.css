@@ -2,6 +2,10 @@
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 
+input{
+    border-color: #333333!important;
+}
+
 /* graphite flat button */
 .graphite-flat-button{
     position: relative;
@@ -47,6 +51,16 @@
 
 .visible_mobile {
     display: none;
+}
+
+.margin_top{
+    margin-top: 40px;
+}
+
+.alert-danger{
+    background-color: #ffffff;
+    border-color: #333333;
+    color: #333333;
 }
 
 /* MEDIA QUERIES */

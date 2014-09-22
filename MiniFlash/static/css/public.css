@@ -6,10 +6,6 @@ body{
     background-color: #16AC87;
 }
 
-input[type=email], input[type=password]{
-    border-color: #333333!important;
-}
-
 .verftical_divider{
     border-left:1px solid #333333;
     border-right:1px solid #333333;
@@ -56,12 +52,6 @@ label{
 
 .alert{
     margin-top: -70px;
-}
-
-.alert-danger{
-    background-color: #ffffff;
-    border-color: #333333;
-    color: #333333;
 }
 
 .help-block{

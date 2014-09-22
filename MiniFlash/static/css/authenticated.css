@@ -97,6 +97,14 @@
     margin-top: 0;
 }
 
+.help-block{
+    color: #ffffff!important;
+}
+
+.has-error .control-label, .has-success .control-label{
+    color: #ffffff;
+}
+
 /* MEDIA QUERIES */
 /* mobile */
 @media (max-width:995px) {
