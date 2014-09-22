@@ -112,7 +112,7 @@
 }
 
 .project_tile{
-    background-color: #FF8137;
+    background-color: #16AC87;
     height: 90px;
     text-align: center;
     text-decoration: none;
@@ -131,5 +131,8 @@
         min-height: 0;
         border-left: none;
         border-top: 4px solid #ffffff;
+    }
+    .project_tile{
+        margin-right: 0;
     }
 }
