@@ -1,0 +1,22 @@
+{% extends 'authenticated/authenticated_base.html' %}
+{% load bootstrap3 %}
+
+{% block user_settings_active %}menu_item_active{% endblock %}
+
+{% block container_header %}<h4>User Settings</h4>{% endblock %}
+
+{% block auth_main_content %}
+
+    <div class="container margin_top">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form action="" method="post" novalidate>
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <input id="public_submit" type="submit" value="Save" class="graphite-flat-button" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'authenticated/authenticated_base.html' %}
+
+{% block projects_active %}menu_item_active{% endblock %}
+
+{% block container_header %}<h4>My Projects</h4>{% endblock %}
+
+{% block auth_main_content %}
+
+    <div class="container-fluid margin_top">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="{% url 'add_project' %}" class="graphite-flat-button button-a">New project</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                {% for project in my_projects %}
+                    <a href="#"><div class="col-md-2 project_tile">
+                        <p class="center_vertical">{{ project.name }}</p>
+                    </div></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

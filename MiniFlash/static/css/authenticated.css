@@ -1,0 +1,138 @@
+#sb-site{
+    background-color: #E6E6E6!important;
+}
+
+.navigation_bar{
+    min-height: 60px;
+    background-color: #16AC87;
+    border-bottom: 4px solid #ffffff;
+}
+
+.footer{
+    min-height: 66px;
+    background-color: #16AC87;
+    border-top: 4px solid #ffffff;
+    margin-bottom: 0;
+}
+
+#auth_logo{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#auth_logo a:hover{
+    text-decoration: none;
+}
+
+#toggle_slider{
+    font-size: 35px;
+    margin-top: 9px;
+}
+
+#user_info{
+    text-align: center;
+    min-height: 66px;
+    border-bottom: 4px solid #ffffff;
+    padding: 0 40px 0 40px;
+}
+
+.menu_item{
+    padding-left: 55px;
+    min-height: 55px;
+    border-bottom: 1px solid #898989;
+    font-size: 15px;
+    padding-top: 15px;
+}
+.menu_item_active{
+    background-color: #16AC87;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;;
+}
+.menu_item_active_first{
+    background-color: #16AC87;
+    border-bottom: 2px solid #ffffff;;
+}
+.menu_item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#user_image{
+    margin-top: 9px;
+    float: left;
+}
+
+#hello_text{
+    float: right;
+    margin-top: 22px;
+}
+
+#container_row{
+    padding: 15px 15px 15px 15px;
+}
+
+#auth_container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 865px;
+    color: #ffffff;
+}
+
+#auth_additional_right{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FF8137;
+    min-height: 865px;
+    border-left: 4px solid #ffffff;
+    color: #ffffff;
+}
+
+.container_header{
+    border-bottom: 4px solid #ffffff;
+    min-height: 35px;
+}
+
+.container_header h4{
+    margin-top: 0;
+}
+
+.help-block{
+    color: #ffffff!important;
+}
+
+.has-error .control-label, .has-success .control-label{
+    color: #ffffff;
+}
+
+.alert-success{
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #333333;
+}
+
+.project_tile{
+    background-color: #16AC87;
+    height: 90px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+/* mobile */
+@media (max-width:995px) {
+    #auth_container{
+        min-height: 0;
+    }
+    #auth_additional_right{
+        min-height: 0;
+        border-left: none;
+        border-top: 4px solid #ffffff;
+    }
+    .project_tile{
+        margin-right: 0;
+    }
+}

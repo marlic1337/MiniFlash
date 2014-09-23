@@ -1,0 +1,23 @@
+{% extends 'authenticated/authenticated_base.html' %}
+{% load bootstrap3 %}
+
+{% block projects_active %}menu_item_active{% endblock %}
+
+{% block container_header %}<h4>New Project</h4>{% endblock %}
+
+{% block auth_main_content %}
+
+    <div class="container margin_top">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form action="" method="post" novalidate>
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <div class="col-xs-6 no_padding_left"><input id="public_submit" type="submit" value="Create" class="graphite-flat-button" /></div>
+                    <div class="col-xs-6 no_padding_right"><a href="{% url 'my_projects' %}" class="graphite-flat-button button-a">Cancel</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

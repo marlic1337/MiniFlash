@@ -1,0 +1,73 @@
+{% extends 'main.html' %}
+{% load bootstrap3 %}
+
+{% block extra_styles %}
+    <link href="/static/css/authenticated.css" rel="stylesheet">
+    <link href="/static/css/slidebars.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+
+    <div id="sb-site">
+        <!-- navbar -->
+        <nav class="navigation_bar" role="navigation">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-4"><div id="toggle_slider"><span class="sb-toggle-left glyphicon glyphicon-align-justify"></span></div></div>
+                    <div class="col-xs-4"><div id="auth_logo" class="center_text"><a href="{% url 'home' %}"><p class="text_color_white">Mini<span class="text_color_dark">Flash</span></p></a></div></div>
+                    <div class="col-xs-4"></div>
+                </div>
+            </div>
+        </nav><!-- end navbar -->
+
+        <!-- main site content -->
+        <div class="container-fluid">
+            <div id="container_row" class="row">
+                <div id="auth_container" class="col-md-10">
+                    {% bootstrap_messages %}
+                    <div class="container_header">{% block container_header %}{% endblock %}</div>
+                    {% block auth_main_content %}{% endblock %}
+                </div>
+                <div id="auth_additional_right" class="col-md-2">
+                    {% block auth_additional_right %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sb-slidebar sb-left sb-width-custom" data-sb-width="270px">
+        <!-- left slidebar content -->
+        <div id="user_info">
+            <img id="user_image" width="45px" src="{{ request.user.logo_url }}" class="img-circle" alt="User Image" />
+            <div id="hello_text"><p class="text_color_white">Hello, {{ request.user.username }}</p></div>
+        </div>
+        <div class="menu_item {% block overview_active %}{% endblock %}"><a href="{% url 'overview' %}"><span class="glyphicon glyphicon-globe text_color_white"></span> Overview</a></div>
+        <div class="menu_item {% block projects_active %}{% endblock %}"><a href="{% url 'my_projects' %}"><span class="glyphicon glyphicon-folder-open text_color_white"></span> Projects</a></div>
+        <div class="menu_item {% block user_settings_active %}{% endblock %}"><a href="{% url 'user_settings' %}"><span class="glyphicon glyphicon-user text_color_white"></span> User Settings</a></div>
+        <div class="menu_item"><a href="{% url 'account_logout' %}"><span class="glyphicon glyphicon-log-out text_color_white"></span> Log Out</a></div>
+    </div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="/static/js/slidebars.min.js"></script>
+    <script>
+        jQuery.noConflict();
+        (function($) {
+            $(function() {
+                // desktop or mobile
+                if($(window).width() > 995){
+                    var slidebar = new $.slidebars({
+                        siteClose: false // true or false
+                    });
+                    slidebar.slidebars.open('left');
+                }
+                else{
+                    var slidebar = new $.slidebars({
+                        siteClose: true // true or false
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+{% endblock %}

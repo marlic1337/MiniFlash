@@ -39,8 +39,9 @@ INSTALLED_APPS = (
 	'allauth',
 	'allauth.account',
 	'south',
-	'User',
 	'bootstrap3',
+    'User',
+    'Project',
 )
 
 SITE_ID = 1
@@ -96,6 +97,7 @@ TEMPLATE_DIRS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.messages.context_processors.messages',
 	# Required by allauth template tags
 	"django.core.context_processors.request",
 	# allauth specific context processors
@@ -116,7 +118,7 @@ AUTH_USER_MODEL = 'User.CustomUser'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 SOCIALACCOUNT_AUTO_SIGNUP = False
 ACCOUNT_FORMS = {'login': 'User.forms.CustomLoginForm', 'signup': 'User.forms.CustomSignupForm'}
 
@@ -133,3 +135,5 @@ BOOTSTRAP3 = {
 	# The complete URL to the Bootstrap JavaScript file (None means derive it from base_url)
 	'javascript_url': os.path.join(BASE_DIR, 'static/js/bootstrap.js'),
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'storage/media/')

@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load bootstrap3 %}
+
+{% block extra_styles %}
+    <link href="/static/css/public.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-switch.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+
+    <a href="https://github.com/nejc92/MiniFlash" target=_blank><img width="140px" style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+
+    <div id="public_container_main" class="container-fluid">
+        <div id="public_row" class="row center_vertical">
+            <div class="col-md-8 col-centered">
+                <div id="public_left_container" class="col-md-4 center_text">
+                    <h1>Mini<span class="text_color_white">Flash</span></h1>
+                    <p><span class="text_color_white">Minimalistic</span> agile<span class="text_color_white"> development</span> tool</p>
+                </div><!--- end col -->
+                <div class="col-md-4 visible_desktop"><div class="verftical_divider"></div></div>
+                <div id="public_right_container" class="col-md-4 center_text">
+                    <form action="" method="post" novalidate>
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <input id="public_submit" type="submit" value="{% block submit_value %}{% endblock %}" class="graphite-flat-button" />
+                        {% block link %}{% endblock %}
+                    </form>
+                </div><!--- end col -->
+            </div><!--- end col -->
+        </div><!--- end row -->
+    </div><!--- end container-fluid -->
+
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="/static/js/bootstrap-switch.min.js"></script>
+    <script>
+        jQuery.noConflict();
+        (function($) {
+            $(function() {
+                $("#id_remember").bootstrapSwitch();
+            });
+        })(jQuery);
+    </script>
+{% endblock %}
