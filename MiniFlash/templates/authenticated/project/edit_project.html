@@ -1,0 +1,7 @@
+{% extends 'authenticated/project/add_project.html' %}
+
+{% block container_header %}<h4>Edit Project - {{ project.name }}</h4>{% endblock %}
+
+{% block submit_value %}Save{% endblock %}
+
+{% block cancel_url %}{% url 'project_detail' project.id %}{% endblock %}

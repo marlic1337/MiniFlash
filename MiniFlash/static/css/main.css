@@ -80,6 +80,11 @@ input{
     padding-right: 0;
 }
 
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
 /* MEDIA QUERIES */
 /* mobile */
 @media (max-width:995px) {

@@ -19,8 +19,3 @@ Schema migrations:
 	When you create a new app with models: python manage.py schemamigration APPNAME --initial; python manage.py migrate
 	When you modify models.py: python manage.py schemamigration APPNAME --auto; python manage.py migrate
 	When you git pull new migrations: python manage.py migrate
-
-Superuser account:
-    Username: admin,
-    Email: admin@admin.com,
-    Password: admin

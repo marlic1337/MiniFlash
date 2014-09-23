@@ -17,7 +17,7 @@ class CustomSignupForm(SignupForm):
 class UserSettingsForm(ModelForm):
 	class Meta:
 		model = CustomUser
-		fields = ['username', 'short_description', 'logo']
+		fields = ['first_name', 'last_name', 'username', 'title', 'logo']
 
 	def __init__(self, *args, **kwargs):
 		super(UserSettingsForm, self).__init__(*args, **kwargs)
