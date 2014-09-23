@@ -13,8 +13,8 @@
                 <form action="" method="post" novalidate>
                     {% csrf_token %}
                     {% bootstrap_form form %}
-                    <div class="col-xs-6 no_padding_left"><input id="public_submit" type="submit" value="Create" class="graphite-flat-button" /></div>
-                    <div class="col-xs-6 no_padding_right"><a href="{% url 'my_projects' %}" class="graphite-flat-button button-a">Cancel</a></div>
+                    <div class="col-xs-6 no_padding_left"><input id="public_submit" type="submit" value="{% block submit_value %}Create{% endblock %}" class="graphite-flat-button" /></div>
+                    <div class="col-xs-6 no_padding_right"><a href="{% block cancel_url %}{% url 'my_projects' %}{% endblock %}" class="graphite-flat-button button-a">Cancel</a></div>
                 </form>
             </div>
         </div>
