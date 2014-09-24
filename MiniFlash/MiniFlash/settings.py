@@ -42,6 +42,8 @@ INSTALLED_APPS = (
 	'bootstrap3',
     'User',
     'Project',
+    'Feature',
+    'Task',
 )
 
 SITE_ID = 1
